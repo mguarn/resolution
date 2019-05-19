@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Resolution</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <section class="jumbotron text-center">
+        <div id="container">
+            <div class="header">
+                <h1 class="text-muted">Resolution</h1>
+                <p>Can't decide what to have for dinner? Or which pub to go to?</p>
+                <p>Add your options below and <strong>resolution</strong> will sort out the decision for you</p>
+            </div>
+             <form class= 'containerForm' method='post' id="choice_form">
+                <button class="btn btn-success">Make a decision for me</button>
+                 <br>
+                 <br>
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="form-group label-floating">
+                            <label class="control-label">Option 1</label>
+                            <input type="text" class="form-control" name="choice_1" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="form-group label-floating">
+                            <label class="control-label">Option 2</label>
+                            <input type="text" class="form-control" name="choice_2" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+             </form>
+        </div>
+        <button id="btn" class="btn btn-warning">Add option</button>
+    </section>
+    <script>
+        var count=3;
+    $("#btn").click(function(){
+
+      $("#choice_form").append(addNewRow(count));
+      count++;
+    });
+
+    function addNewRow(count){
+      var newrow='<div class="row justify-content-center">'+
+        '<div class="col-md-4">'+
+            '<div class="form-group label-floating">'+
+                '<label class="control-label">Option '+count+'</label>'+
+                '<input type="text" class="form-control" name="choice_'+
+                count+
+                '" autocomplete="off">'+
+            '</div>'+
+        '</div>'+
+    '</div>';
+      return newrow;
+    }
+    </script>
+</body>
+</html>

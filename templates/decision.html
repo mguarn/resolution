@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Resolution</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+<section class="jumbotron text-center">
+      <div class="header">
+        <h1 class="text-muted">Resolution</h1>
+      </div>
+      <div class="jumbotron">
+          <h3 class="text-muted">From the choices: <strong>{{choice_string}}</strong></h3>
+          <h3 class="text-muted">you should choose...</h3>
+          <h2 class="text">{{choice}}</h2>
+        <br>
+        <form class="form-signin" method="post">
+          <input onclick="location.href='/';"
+                 class="btn btn-primary btn-success"
+                 type="reset" value="Make a new decision">
+        </form>
+      </div>
+</section>
+</body>
+</html>
